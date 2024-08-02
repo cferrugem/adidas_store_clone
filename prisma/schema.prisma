@@ -1,0 +1,34 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model sales_adidas_2 {
+  index          String    @id
+  url            String?
+  name           String?
+  sku            String?
+  selling_price  BigInt?
+  original_price String?
+  currency       String?
+  availability   String?
+  color          String?
+  category       String?
+  source         String?
+  source_website String?
+  breadcrumbs    String?
+  description    String?
+  brand          String?
+  images         String?
+  country        String?
+  language       String?
+  average_rating Float?
+  reviews_count  BigInt?
+  crawled_at     DateTime? @db.Timestamptz(6)
+}

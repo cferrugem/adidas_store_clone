@@ -9,7 +9,7 @@ export default async function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Página Principal</h1>
+      <h1>Products</h1>
       {/* <div>
         {sales.map((sale) => (
           <div key={sale.index} className="flex flex-col items-center">
