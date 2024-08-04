@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react'; // Import React and necessary hooks
 import Image from 'next/image'; // Import Image component from Next.js for optimized image handling
+import Nav from "./nav";
 
 export default function Header() {
   // State to hold the current text value
@@ -24,13 +25,13 @@ export default function Header() {
   }, []); // Empty dependency array means this effect runs only once after initial render
 
   return (
-    <header>
+    <header className='font-adihausdin'>
       {/* Div to display the changing text */}
-      <div className='bg-black flex h-[39px] text-white justify-center items-center uppercase text-xs font-bold'>
+      <div className='bg-black flex h-[39px] text-white justify-center items-center uppercase text-xs font-medium '>
         <p>{text}</p> {/* Render the current text */}
+        <span className='ml-4'><Image src="images/down-arrow-svgrepo-com.svg" width={15} height={15} alt='Arrow Down'/></span>
       </div>
-      {/* Display the logo with Next.js optimized Image component */}
-      <Image src="/adidas_logo.svg" alt="Logo" width={100} height={100} />
+        <Nav />
     </header>
   );
 }

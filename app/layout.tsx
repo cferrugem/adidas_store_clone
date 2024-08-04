@@ -1,10 +1,19 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import localfont from "next/font/local"
 import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
+
+// Import the local font
+const adihausdin = localfont({
+  src: [{
+    path: "../public/fonts/AdihausDIN.ttf",
+  }],
+  variable: "--font-adihausdin",
+})
 
 export const metadata: Metadata = {
   title: "adidas Brasil - Tênis e material esportivo",
@@ -18,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>
+      <body className={`${adihausdin.variable}inter.className`}>
          <Header/>
           {children}
       </body>
