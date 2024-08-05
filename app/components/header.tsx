@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'; // Import React and necessary hooks
 import Image from 'next/image'; // Import Image component from Next.js for optimized image handling
-import Nav from "./nav";
+import Nav from "./nav"; // Import the Nav component
 
 export default function Header() {
   // State to hold the current text value
