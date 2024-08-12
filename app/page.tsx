@@ -10,14 +10,14 @@ export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1>Página Principal</h1>
-      {/* <div>
+      { <div>
         {sales.map((sale) => (
           <div key={sale.index} className="flex flex-col items-center">
             <h2>{sale.name}</h2>
             <p>{sale.selling_price}</p>
           </div>
         ))}
-      </div> */}
+      </div> }
     </main>
   );
 }

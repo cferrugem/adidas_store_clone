@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'; // Import React and necessary hooks
 import Image from 'next/image'; // Import Image component from Next.js for optimized image handling
-import Nav from "./nav"; // Import the Nav component
+import { Navbar } from './navbar'; // Import the Navbar component
 
 export default function Header() {
   // State to hold the current text value
@@ -18,7 +18,7 @@ export default function Header() {
       const randomIndex = Math.floor(Math.random() * texts.length);
       // Update the text state with the selected text
       setText(texts[randomIndex]);
-    }, 2500); // Update text every 3 seconds (3000 milliseconds)
+    }, 2000); // Update text every 2 seconds (2000 milliseconds)
 
     // Cleanup function to clear the interval when the component is unmounted
     return () => clearInterval(intervalId);
@@ -27,11 +27,11 @@ export default function Header() {
   return (
     <header className='font-adihausdin'>
       {/* Div to display the changing text */}
-      <div className='bg-black flex h-[39px] text-white justify-center items-center uppercase text-xs font-medium '>
+      <div className='bg-[#000000] flex h-[39px] text-[#FFFFFF] justify-center items-center uppercase text-xs font-medium '>
         <p>{text}</p> {/* Render the current text */}
         <span className='ml-4'><Image src="images/down-arrow-svgrepo-com.svg" width={15} height={15} alt='Arrow Down'/></span>
       </div>
-        <Nav />
+        <Navbar/>
     </header>
   );
 }
