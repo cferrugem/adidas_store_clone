@@ -25,9 +25,9 @@ export default function Header() {
   }, []); // Empty dependency array means this effect runs only once after initial render
 
   return (
-    <header className='font-adihausdin'>
+    <header className='font-adihausdin w-full'>
       {/* Div to display the changing text */}
-      <div className='bg-[#000000] flex h-[39px] text-[#FFFFFF] justify-center items-center uppercase text-xs font-medium '>
+      <div className='bg-[#000000] flex h-[39px] w-full text-[#FFFFFF] justify-center items-center uppercase text-xs font-medium '>
         <p>{text}</p> {/* Render the current text */}
         <span className='ml-4'><Image src="images/down-arrow-svgrepo-com.svg" width={15} height={15} alt='Arrow Down'/></span>
       </div>

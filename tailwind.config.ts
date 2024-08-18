@@ -75,6 +75,8 @@ const config: Config = {
               }
             }
           }
+          
+          
 },
   plugins: [require("tailwindcss-animate")],
 };

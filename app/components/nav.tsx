@@ -1,17 +1,24 @@
 import React from "react";
-import Image from "next/image"; // Import Image component from Next.js for optimized image handling
+import Image from "next/image";
 
 export default function Nav() {
   return (
-    <nav className="flex bg-white h-[82px] items-center px-[38px] justify-between">
-      <figure className="flex">
+    <nav className="flex flex-col md:flex-row bg-white h-auto md:h-[82px] items-center px-4 md:px-[38px] justify-between">
+      <figure className="flex mb-4 md:mb-0">
         {/* Display the logo with Next.js optimized Image component */}
-        <Image src="images/adidas_logo.svg" alt="Logo" width={60} height={60} />
+        <Image
+          src="images/adidas_logo.svg"
+          alt="Logo"
+          width={60}
+          height={60}
+        />
       </figure>
-      <div className="flex flex-col items-center flex-grow text-center">
-        <ul className="flex w-full justify-end space-x-5 text-xs h-9">
+      <div className="flex flex-col items-center flex-grow text-center space-y-4 md:space-y-0">
+        <ul className="flex w-full justify-between md:justify-end space-x-5 text-xs h-9">
           <li>
-            <a className="align-top" href="">blog</a>
+            <a className="align-top" href="">
+              blog
+            </a>
           </li>
           <li>
             <a href="">ajuda</a>
@@ -24,7 +31,7 @@ export default function Nav() {
           </li>
         </ul>
         <div className="flex w-full justify-center relative">
-          <ul className="flex space-x-7 uppercase tracking-wide">
+          <ul className="flex flex-wrap justify-center md:justify-start space-x-4 md:space-x-7 uppercase tracking-wide text-sm md:text-base">
             <li className="font-medium">
               <a href="">calçados</a>
             </li>
@@ -44,24 +51,44 @@ export default function Nav() {
               <a href="">mundo adidas</a>
             </li>
           </ul>
-          <div className=" flex absolute right-0 bottom-[-10px]">
-          <input
+          <div className="flex absolute right-0 -bottom-4 md:bottom-[-10px] space-x-3 items-center">
+            <input
               type="text"
               placeholder="Buscar"
-              className="border-2 border-gray-400 rounded-md p-1"
+              className="border-2 border-gray-400 rounded-md p-1 text-xs md:text-sm"
             />
-            <div className="flex items-center">
-              <ul>
-                <li><a href=""><span><Image src="images/user.svg" width={15} height={15} alt='Arrow Down'/></span></a></li>
-              </ul>
-              <ul>
-                <li><a href=""><span><Image src="images/heart.svg" width={15} height={15} alt='Arrow Down'/></span></a></li>
-              </ul>
-              <ul>
-                <li><a href=""><span><Image src="images/cart.svg" width={15} height={15} alt='Arrow Down'/></span></a></li>
-              </ul>
-            </div>
-
+            <ul className="flex space-x-2">
+              <li>
+                <a href="">
+                  <Image
+                    src="images/user.svg"
+                    width={20}
+                    height={20}
+                    alt="User Icon"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <Image
+                    src="images/heart.svg"
+                    width={20}
+                    height={20}
+                    alt="Favorites Icon"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <Image
+                    src="images/cart.svg"
+                    width={20}
+                    height={20}
+                    alt="Cart Icon"
+                  />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
